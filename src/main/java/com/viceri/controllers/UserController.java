@@ -1,7 +1,7 @@
 package com.viceri.controllers;
 
 import com.viceri.repositories.UserRepository;
-import entities.Users;
+import com.viceri.entities.Users;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

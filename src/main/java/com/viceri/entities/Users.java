@@ -1,4 +1,4 @@
-package entities;
+package com.viceri.entities;
 
 import lombok.*;
 

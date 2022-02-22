@@ -1,6 +1,6 @@
 package com.viceri.repositories;
 
-import entities.Users;
+import com.viceri.entities.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
