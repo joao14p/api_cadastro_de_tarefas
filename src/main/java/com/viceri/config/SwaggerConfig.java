@@ -1,5 +1,9 @@
 package com.viceri.config;
 
+import org.springdoc.core.GroupedOpenApi;
+import org.springframework.context.annotation.Bean;
+
+
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -9,8 +13,6 @@ import io.swagger.v3.oas.models.security.OAuthFlow;
 import io.swagger.v3.oas.models.security.OAuthFlows;
 import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
-import org.springdoc.core.GroupedOpenApi;
-import org.springframework.context.annotation.Bean;
 
 public class SwaggerConfig {
     private static final String GROUP = "backend-api";
@@ -18,9 +20,10 @@ public class SwaggerConfig {
     private String oAuthServerTokenUri = "/oauth-server/oauth/token";
 
     @Bean
-    public GroupOpenApi groupOpenApi() {
+    public GroupedOpenApi groupOpenApi() {
         return GroupedOpenApi.builder().group(GROUP).pathsToMatch("/**").build();
     }
+
 
     @Bean
     public OpenAPI springOpenApi() {
